@@ -79,10 +79,10 @@ describe('Animated', () => {
         opacity: anim,
       },
     };
-    c.componentWillMount();
+    c.UNSAFE_componentWillMount();
 
     expect(anim.__detach).not.toBeCalled();
-    c.componentWillReceiveProps({
+    c.UNSAFE_componentWillReceiveProps({
       style: {
         opacity: anim,
       },
@@ -109,7 +109,7 @@ describe('Animated', () => {
         opacity: anim,
       },
     };
-    c.componentWillMount();
+    c.UNSAFE_componentWillMount();
 
     Animated.timing(anim, {toValue: 10, duration: 1000}).start(callback);
 

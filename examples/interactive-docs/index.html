@@ -415,7 +415,7 @@ examplify(createClass({
       anim: new Animated.Value(1),
     };
   },
-  componentWillMount: function() {
+  UNSAFE_componentWillMount: function() {
     this.interpolate = this.state.anim.interpolate({
       inputRange: [0, 1],
       outputRange: ['260deg', '0deg']

@@ -28,7 +28,7 @@ function createAnimatedComponent(Component: any): any {
       }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this.attachProps(this.props);
     }
 
@@ -64,7 +64,7 @@ function createAnimatedComponent(Component: any): any {
       oldPropsAnimated && oldPropsAnimated.__detach();
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       this.attachProps(nextProps);
     }
 
@@ -79,7 +79,7 @@ function createAnimatedComponent(Component: any): any {
         />
       );
     }
-    
+
     getNode() {
       return this.componentRef;
     }
